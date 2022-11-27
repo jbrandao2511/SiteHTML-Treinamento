@@ -1,1 +1,13 @@
-service
+[Unit]
+Description=WebDate - Serviço Web de Data
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=centos
+ExecStart=/usr/bin/node /caminho/arquivo.js
+ 
+[Install]
+WantedBy=multi-user.target
